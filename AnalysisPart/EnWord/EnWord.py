@@ -9,8 +9,10 @@ import pandas as pd
 import re
 from math import log
 
-RESULTFILE="EnFreq.csv"
-PWDFILE="E:\Postgraduate\Curriculum\yahoopw.csv"
+FileFlag=1# 0是yahoo，1是csdn
+RESULTFILE="EnFreqRes_y.csv"
+PWDFILE="yahoopw.csv"
+PWDFILE_c="csdn.csv"
 fre={}
 
 def returnToWord(string):
@@ -64,17 +66,30 @@ def infer_spaces(s):
     return " ".join(reversed(out))
 
 
-# df2=pd.DataFrame.append()
-df=pd.read_csv(PWDFILE)
-for pwd in df['passwd']:
-    temp=returnToWord(str(pwd))
-    temp=infer_spaces(temp)
-    temp=temp.split(' ')
-    for wd in temp:
-        if wd not in fre:
-            fre[wd]=1
-        else:
-            fre[wd]+=1
-f=list(fre.items())
-pd.DataFrame(list(fre.items())).to_csv('EnFreq.csv')
+if FileFlag==0:
+    df=pd.read_csv(PWDFILE,low_memory=False)
+    for pwd in df['passwd']:
+        temp=returnToWord(str(pwd))
+        temp=infer_spaces(temp)
+        temp=temp.split(' ')
+        for wd in temp:
+            if wd not in fre:
+                fre[wd]=1
+            else:
+                fre[wd]+=1
+    pd.DataFrame(list(fre.items())).to_csv('EnFreqRes_y.csv')
+
+else:
+    df = pd.read_csv(PWDFILE_c,encoding='gbk',low_memory=False,header=None,names=['username','passwd','mail'])
+    for pwd in df['passwd']:
+        temp = returnToWord(str(pwd))
+        temp = infer_spaces(temp)
+        temp = temp.split(' ')
+        for wd in temp:
+            if wd not in fre:
+                fre[wd] = 1
+            else:
+                fre[wd] += 1
+    pd.DataFrame(list(fre.items())).to_csv('EnFreqRes_c.csv')
+
 
