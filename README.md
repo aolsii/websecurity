@@ -6,22 +6,21 @@ HW about password analysis and crack
 [如何分割单词](https://stackoverflow.com/questions/8870261/how-to-split-text-without-spaces-into-list-of-words)
 
 ## 键盘分析统计
+-原始数据集的读取（以读取CSDN数据集为例）
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20201113104938274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
 
-生成键盘模式下关键字概率分析结果
-![原始数据集的读取（以读取CSDN数据集为例](https://img-blog.csdnimg.cn/20201113104940620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
-
-生成键盘模式下的口令数据集
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020111310494027.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
-
-匹配口令与键盘模式的最长公共子串
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202011131049404.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
-
-键盘模式下的14类（共108种）模式分析
-比如第0~3种是第1类（即键盘第一行）模式，如下：
+-键盘模式下的14类（共108种）模式分析
+-比如第0~3种是第1类（即键盘第一行）模式，如下：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201113104938595.png#pic_center)
 
-原始数据集的读取（以读取CSDN数据集为例）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201113104938274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
+-匹配口令与键盘模式的最长公共子串
+![在这里插入图片描述](https://img-blog.csdnimg.cn/202011131049404.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
+
+-生成键盘模式下的口令数据集
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2020111310494027.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
+
+-生成键盘模式下关键字概率分析结果
+![原始数据集的读取（以读取CSDN数据集为例](https://img-blog.csdnimg.cn/20201113104940620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
 
 
 ## PCFG
