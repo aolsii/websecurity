@@ -7,6 +7,8 @@ HW about password analysis and crack
 
 ## 键盘分析统计
 
+![原始数据集的读取（以读取CSDN数据集为例](https://img-blog.csdnimg.cn/20201113104940620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L211c2tldGVlcl9taWxr,size_16,color_FFFFFF,t_70#pic_center)
+
 ## PCFG
 ```html
 1.结构分析
